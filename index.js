@@ -15,7 +15,7 @@ const paragraphGenerator = (num = 1, dictionary = trekWords) => {
     let allParagraph = []
     let paragraph = []
     
-    for (i = 0; i < num; i++){
+    for (let i = 0; i < num; i++){
       for (let i = 0; i < 100; i++){
         let randomWord = dictionary[Math.floor(Math.random() * dictionary.length)]
 
@@ -24,8 +24,8 @@ const paragraphGenerator = (num = 1, dictionary = trekWords) => {
           let restOfLetters = randomWord.slice(1)
           paragraph.push(firstLetter + restOfLetters)
         } else {
-          paragraph.push(randomWord)  
-        }      
+          paragraph.push(randomWord)
+        } 
       }
       let joined = paragraph.join(' ') + '.'
       allParagraph.push(joined)
@@ -35,6 +35,7 @@ const paragraphGenerator = (num = 1, dictionary = trekWords) => {
     document.getElementById('ipsum').innerHTML = allParagraph.join('<br><br>')
 
   }
+
 
 
 //Integration with HTML

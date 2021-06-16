@@ -1,7 +1,33 @@
+/* FONTS */
+
 @font-face{
     font-family: 'Spaceships';
     src: url("FamousSpaceships-g6X4.ttf") format('truetype')
 }
+@font-face{
+    font-family: 'Federation';
+    src: url("Federation.ttf") format('truetype')
+}
+@font-face{
+    font-family: 'Starfleet';
+    src: url("Starfleet_1.ttf") format('truetype')
+}
+@font-face{
+    font-family: 'Trek TNG';
+    src: url("Trek_TNG_Monitors.ttf") format('truetype')
+}
+@font-face{
+    font-family: 'Trekbats';
+    src: url("Trekbats.ttf") format('truetype')
+}
+@font-face{
+    font-family: 'Roddenberry';
+    src: url("Roddenberry.ttf") format('truetype')
+}
+
+
+
+/* Actual CSS */
 
 html {
     background-color: black;
@@ -13,7 +39,8 @@ body {
 }
 
 header {
-    font-size: 60px;
+    font-size: 40px;
+    font-family: 'Federation', 'Courier New', Courier, monospace;
 }
 
 
