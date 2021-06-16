@@ -16,20 +16,31 @@ const paragraphGenerator = (num = 1, dictionary = trekWords) => {
     let paragraph = []
     
     for (let i = 0; i < num; i++){
-      for (let i = 0; i < 100; i++){
-        let randomWord = dictionary[Math.floor(Math.random() * dictionary.length)]
+      for (let j = 0; j < 10; j++){
+        
 
-        if (i === 0) {
-          let firstLetter = randomWord[0].toUpperCase()
-          let restOfLetters = randomWord.slice(1)
-          paragraph.push(firstLetter + restOfLetters)
+        let sentence = []
+
+
+        for (let k = 0; k < 12; k++){
+        let randomWord = dictionary[Math.floor(Math.random() * dictionary.length)]
+        if (k === 0) {
+            let firstLetter = randomWord[0].toUpperCase()
+            let restOfLetters = randomWord.slice(1)
+            sentence.push(firstLetter + restOfLetters)
         } else {
-          paragraph.push(randomWord)
-        } 
+            sentence.push(randomWord)
+        }
       }
-      let joined = paragraph.join(' ') + '.'
+       let joinedSentence = sentence.join(' ')
+
+       paragraph.push(joinedSentence + '.')
+         
+      }
+      let joined = paragraph.join(' ')
       allParagraph.push(joined)
       paragraph = []
+      sentence = []
     }
 
     document.getElementById('ipsum').innerHTML = allParagraph.join('<br><br>')
