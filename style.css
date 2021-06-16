@@ -1,3 +1,7 @@
+@font-face{
+    font-family: 'Spaceships';
+    src: url("FamousSpaceships-g6X4.ttf") format('truetype')
+}
 
 html {
     background-color: black;
@@ -7,3 +11,14 @@ html {
 body {
     font-family: 'Courier New', Courier, monospace;
 }
+
+header {
+    font-size: 60px;
+}
+
+
+footer > #spaceshipfooter {
+    font-family: 'Spaceships';
+    font-size: 45px;
+}
+
