@@ -1,0 +1,1 @@
+A Star Trek-themed lorum ipsum generator, to use as practice for learning JavaScript, HTML, CSS, and git/GitHub. 
