@@ -40,24 +40,27 @@ const paragraphGenerator = (num = 1, dictionary = trekWords) => {
 let dictionaryChoice = trekWords;
 let submitButton = document.getElementById('paragraphsubmit')
 
-//Checkboxes for choice of language
-var checkboxklingon = document.querySelector("input[name=klingon]");
-checkboxklingon.addEventListener('change', function() {
-    if (this.checked) {
-        dictionaryChoice = klingonWords;
-    } else {
-        dictionaryChoice = trekWords;
-    }
-});
+//Radio buttons to determine choice of language
 
-var checkboxvulcan = document.querySelector("input[name=vulcan]");
-checkboxvulcan.addEventListener('change', function() {
-    if (this.checked) {
-        dictionaryChoice = vulcanWords;
-    } else {
+    const standard = document.getElementById('standardbox')
+    const klingon = document.getElementById('klingonbox')
+    const vulcan = document.getElementById('vulcanbox')
+
+
+
+    let radios = document.querySelectorAll('input[type=radio][name="language"]');
+    radios.forEach(radio => radio.addEventListener('change', function(){
+      if (radio.id === standard.id){
         dictionaryChoice = trekWords;
-    }
-});
+      }
+      if (radio.id === klingon.id){
+        dictionaryChoice = klingonWords;
+      }
+      if (radio.id === vulcan.id){
+        dictionaryChoice = vulcanWords;
+      }
+    }));
+
 
 //Submits user request for amount of paragraphs and generates text
 submitButton.addEventListener('click', function(){

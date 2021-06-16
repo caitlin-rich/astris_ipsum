@@ -17,11 +17,14 @@
         <!--User requests amount of paragraphs-->
         <label for = "amtparagraphs">How many paragraphs?:</label>
         <input type = "text" id = "amtparagraphs" value = "1"><br>
-        <!--Checkboxes for different languages; all unchecked defaults to original trekWords list.-->
-        <input type="checkbox" id="klingonbox" name="klingon">
+        <!--Radio buttons to choose language-->
+        <input type="radio" id="standardbox" name="language">
+        <label for="standard">Trekum Ipsum</label>
+        <br>
+        <input type="radio" id="klingonbox" name="language">
         <label for="klingon">Klingon Ipsum</label>
         <br>
-        <input type="checkbox" id="vulcanbox" name="vulcan">
+        <input type="radio" id="vulcanbox" name="language">
         <label for="vulcan">Vulcan Ipsum</label><br>
         <!--Submit button-->
         <button type="button" id = 'paragraphsubmit'>Generate My Text</button> <br>
